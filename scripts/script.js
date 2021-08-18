@@ -10,7 +10,6 @@ allDivs.forEach((item)=>{
             count++;
             item.style.initialTranslate = 'translateY(-100%)';
             item.style.addTranslate = 'translateY(100%)';
-
         }
         else if(classes.contains("decrement")) count--;
         else count=0;

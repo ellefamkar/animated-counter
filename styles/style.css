@@ -9,8 +9,8 @@
 
 body {
     height: 100vh;
-    background:  rgba(245, 131, 139, 1);
-    /* background: url('../images/cart1.jpg') center / contain no-repeat; */
+    background:linear-gradient(0deg, rgba(189, 189, 189, 0.726), rgba(253, 167, 207, 0.959)), url('../images/cart2.jpg');
+    background-size:cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
