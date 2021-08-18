@@ -1,0 +1,282 @@
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+body {
+    height: 100vh;
+    background:  rgba(245, 131, 139, 1);
+    /* background: url('../images/cart1.jpg') center / contain no-repeat; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.shiny-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Indie Flower', cursive;
+    padding: 1.2rem;
+    background: linear-gradient(to right, #2e2e2e 0, white 27%, #4d4d4d 40%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 4s infinite linear;
+    animation-fill-mode: forwards;
+    -webkit-text-size-adjust: none;
+    font-weight: 600;
+    font-size: 39px;
+    white-space: nowrap ;
+  }
+      
+@keyframes shine{
+    0%
+    { background-position: 0; }
+    60%
+     { background-position: 180px;}
+    100%
+     { background-position: 180px;}
+}
+
+.counter-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.decrement-wrapper,
+.reset-wrapper,
+.increment-wrapper {
+    margin: auto;
+    display: flex;
+    text-align: initial;
+    width: 85px;
+    height: 85px;
+    cursor: pointer;
+  }
+
+/*____ decrement styles ____*/
+
+.decrement {
+    position: relative;
+    width: 30%;
+    height: 54%;
+    margin: auto;
+    margin-right: 0rem;
+    background: -webkit-linear-gradient(#3c4349, #252a2d);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    transition: 0.5s;
+    transform: rotateZ(90deg);
+    border-radius: 3px;
+    outline: none;
+    appearance: none;
+}
+
+.decrement:focus-visible {
+    appearance: none;
+    outline: none !important;
+    background-color: transparent;
+}
+
+.decrement p {
+    z-index: 1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family: 'Indie Flower', cursive;
+    margin-right: -0.1rem;
+    font-size: 40px;
+    color: transparent;
+    background: linear-gradient(45deg, #ffffff, #ffffff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transform: rotateZ(-90deg);
+}
+  
+.decrement p:focus-visible {
+    appearance: none;
+    outline: none !important;
+    background-color: transparent;
+}
+  
+.decrement:before,
+.decrement:after {
+    position: absolute;
+    content: "";
+    background: inherit;
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+    transform-origin: center;
+    border-radius: 3px;
+}
+
+.decrement:before {
+    transform: rotateZ(60deg);
+}
+
+.decrement:after {
+    transform: rotateZ(-60deg);
+}
+
+.decrement:hover {
+    border-radius: 4px;
+    transition: 0.5s;
+    transform: rotateZ(0deg);
+    transform: rotateZ(90deg);
+  }
+
+.decrement:hover:before {
+    border-radius: 4px;
+    transition: 0.5s;
+    transform: rotateZ(180deg);
+  
+}
+
+.decrement:hover:after {
+    transform: rotateZ(-180deg);
+    border-radius: 4px;
+    transition: 0.5s;
+}
+  
+/*______ reset styles _____*/
+
+.reset {
+    position: relative;
+    width: 30%;
+    height: 54%;
+    margin: auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    transform: rotateZ(90deg);
+    background: -webkit-linear-gradient(#3c4349, #252a2d);
+    transition: 0.5s;
+    border-radius: 3px;
+}
+  
+.reset span {
+    z-index: 1;
+    font-size: 27px;
+    font-family: 'Indie Flower', cursive;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color: transparent;
+    background: linear-gradient(45deg, #ffffff, #ffffff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transform: rotateZ(-90deg);
+}
+
+.reset:before,
+.reset:after {
+    position: absolute;
+    content: "";
+    background: inherit;
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+    transition: 0.5s;
+    transform-origin: center;
+  }
+
+.reset:before {
+    transform: rotateZ(60deg);
+}
+
+.reset:after {
+    transform: rotateZ(-60deg);
+}
+
+/* if you want to change reset buttom's style too */
+/* .reset:hover {
+    border-radius: 4px;
+    transition: 0.5s;
+  }
+  .reset:hover:before {
+    border-radius: 4px;
+    transition: 0.5s;
+      transform: rotateZ(0deg);
+  }
+  .reset:hover:after {
+      transform: rotateZ(0deg);
+    border-radius: 4px;
+    transition: 0.5s;
+  } */
+  
+.increment {
+    position: relative;
+    width: 30%;
+    height: 54%;
+    margin: auto;
+    margin-left: 0rem;
+    border-radius: 3px;
+    background: -webkit-linear-gradient(#3c4349, #252a2d);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    transition: 0.5s; 
+    transform: rotateZ(90deg);
+}
+
+.increment p {
+    z-index: 1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size: 35px;
+    font-family: 'Indie Flower', cursive;
+    color: white;
+    transform: rotateZ(-90deg);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.increment:before,
+.increment:after {
+    position: absolute;
+    content: "";
+    background: inherit;
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+    transition: 0.5s;
+    transform-origin: center;
+  }
+
+.increment:before {
+    transform: rotateZ(60deg);
+}
+
+.increment:after {
+    transform: rotateZ(-60deg);
+}
+
+.increment:hover {
+    border-radius: 3px;
+    transition: 0.5s;
+   transform: rotateZ(0deg);    
+}
+
+.increment:hover:before {
+    border-radius:3px;
+    transition: 0.5s;
+    transform: rotateZ(90deg);
+  }
+
+.increment:hover:after {
+    transform: rotateZ(90deg);
+    border-radius: 3px;
+    transition: 0.5s;
+}
+  
